@@ -5,9 +5,6 @@ import { fetchData } from './api';
 import Header from './components/Header/header';
 import { Grid } from '@material-ui/core';
 
-
-
-
 class App extends Component {
   state = {
     data : {},
@@ -46,12 +43,3 @@ class App extends Component {
 
 export default App;
 
-
- // <div className={styles.container}>
-      {/* <Chart/>
-      <Cards  data={data}/>
-      
-      <Countryselect />
-          <h1>App</h1> */}
-
-        // </div>
