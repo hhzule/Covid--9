@@ -1,0 +1,158 @@
+.container{
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    transition: 1s ease-out !important;
+}
+
+
+.infected {
+  
+    color: #446db3 !important;
+    text-shadow: 
+    0 0 5px #7bacff,
+    0 0 5px #2c3b53,
+    0 0 1px #4f8dfa,
+    0 0 1px #2a3e61,
+    0 0 1px #0a224b,
+    0 0 1px #265fc2,
+    0 0 1px #111824,
+    0 0 1px #7bacff;
+}
+
+.recovered {
+    color: #3d9474 !important;
+    text-shadow: 
+    0 0 5px #7bffce,
+    0 0 5px #4cb48e,
+    0 0 1px #388065,
+    0 0 1px #235341,
+    0 0 1px #1e7454,
+    0 0 1px #274d3f,
+    0 0 1px #122c22,
+    0 0 1px #0ba76e;
+}
+
+.deaths {
+    color: rgb(238, 120, 130) !important;
+    text-shadow: 
+    0 0 5px #ff7bac,
+    0 0 5px #be1352,
+    0 0 1px #9e1749,
+    0 0 1px #830634,
+    0 0 1px #44091e,
+    0 0 1px #960d3f,
+    0 0 1px #52021e,
+    0 0 1px #eb1060;
+}
+.container {
+ 
+    padding: 6px 0px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+  }
+  .containerb {
+    
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin: 1% 5% 30% 1%;
+  }
+  
+  .circlewrapper {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    
+  }
+  
+  .circleone {
+    border: 15px solid;
+    border-color: rgba(21, 167, 235, .7) rgba(21, 167, 235, .7) transparent transparent;
+    border-radius: 50%;
+    box-sizing: content-box; 
+    height: 198px;
+    width: 198px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: -1;
+    animation: circle-move 10s ease infinite;
+  }
+  
+  
+  .circletwo {
+    background: rgba(168, 24, 24, 0.017);
+    border: 25px solid;
+    border-color: rgba(209, 25, 230, .3) transparent transparent;
+    border-radius: 50%;
+    box-shadow: 15px 0 25px -20px rgba(0, 0, 0, 0.65);
+    box-sizing: content-box; 
+    height: 190px;
+    width: 190px;
+    position: absolute;
+    top: 22%;
+    left: 22%;
+    z-index: -2;
+    animation: circle-move 14s ease infinite;
+  }
+  
+  .circlethree {
+    background: rgba(0,0,0,.012);
+    border: 2px solid;
+    border-color: #CE93D8 transparent;
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: 268px;
+    width: 268px;
+    position: absolute;
+    z-index: -3;
+    top: 15%;
+    left: 15%;
+    animation: circle-move 15s ease infinite;
+  }
+  
+ 
+  
+  
+  @keyframes circle-move {
+    0% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .circlecontent{
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 90%;
+
+
+  }
+
+  @media only screen and (max-width: 1122px) {
+    .container {
+      transition: 1s ease-out !important;
+      flex-direction: column !important;
+      padding-bottom: 150px;
+      margin-top: -200px;
+
+    }
+    .containerb {
+    
+      flex-direction: column; 
+      align-items: center;
+      justify-content: center;
+      margin: 100px 300px !important;
+      padding: 50px 0;
+    }
+    
+  }
