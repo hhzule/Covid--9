@@ -46,7 +46,7 @@ export default function Header() {
         </Grid>
         <Grid item xs={12}>
         <Container maxWidth="xl">
-       <Typography component="div" style={{ backgroundImage: `url(${headimg})`, height: '30vh', opacity: '0.7' }} > 
+       <Typography component="div" style={{ backgroundImage: `url(${headimg})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%', backgroundPosition: 'center center', height: '30vh', opacity: '0.7' }} > 
      <div className={styles.headertext}>COVID '19 TRACKER APP</div>
        </Typography>
      </Container>

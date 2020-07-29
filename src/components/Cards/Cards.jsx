@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, Grid } from '@material-ui/core';
+import {Typography } from '@material-ui/core';
 import styles from './Cards.module.css';
 import CountUp from 'react-countup';
 import cx from 'classnames';
@@ -15,10 +15,10 @@ const Cards = ({data: { confirmed, recovered, deaths, lastUpdate}}) => {
     
     return(
         <div className={styles.container}>
-         <Grid container spacing={6}>
+        
          <div className={styles.containerb}>
   <div className={styles.circlewrapper}>
-    <div className={styles.circlecontent}> <Grid item  xs={12} className={cx(styles.card, styles.infected)}>
+    <div className={styles.circlecontent}> <div className={styles.infected}>
                    
                    <Typography color="textSecondary" gutterBottom>Infected</Typography>
                    <Typography variant="h5">Real time Data<br />
@@ -27,7 +27,7 @@ const Cards = ({data: { confirmed, recovered, deaths, lastUpdate}}) => {
                    <Typography color="textSecondary">Current Date<br />{new Date(lastUpdate).toDateString()}</Typography>
                    <Typography variant="body2">Active cases</Typography>
                
-           </Grid></div>
+           </div></div>
     <div className={styles.circleone}></div>
     <div className={styles.circletwo}></div>
     <div className={styles.circlethree}></div>
@@ -35,7 +35,7 @@ const Cards = ({data: { confirmed, recovered, deaths, lastUpdate}}) => {
 </div>
 <div className={styles.containerb}>
   <div className={styles.circlewrapper}>
-    <div className={styles.circlecontent}> <Grid item  xs={12} className={cx(styles.card, styles.recovered)}>
+    <div className={styles.circlecontent}> <div  className={styles.recovered}>
                    <Typography color="textSecondary" gutterBottom>Recovered</Typography>
                    <Typography variant="h5">Real time Data<br />
                    <CountUp start={0} end={recovered.value} duration={2} separator="," className={cx(styles.neon, styles.digital)}/>
@@ -44,7 +44,7 @@ const Cards = ({data: { confirmed, recovered, deaths, lastUpdate}}) => {
                    <Typography variant="body2">Recovered cases</Typography>
                
                
-           </Grid></div>
+           </div></div>
     <div className={styles.circleone}></div>
     <div className={styles.circletwo}></div>
     <div className={styles.circlethree}></div>
@@ -52,22 +52,22 @@ const Cards = ({data: { confirmed, recovered, deaths, lastUpdate}}) => {
 </div>
 <div className={styles.containerb}>
   <div className={styles.circlewrapper}>
-    <div className={styles.circlecontent}> <Grid item  xs={12} className={cx(styles.card, styles.deaths)}>
+    <div className={styles.circlecontent}> <div  className={styles.deaths}>
     <Typography color="textSecondary" gutterBottom>Deaths</Typography>
-                        <Typography variant="h5">Real time Data<br />
+                        <Typography variant="h6">Real time Data<br />
                         <CountUp start={0} end={deaths.value} duration={2} separator="," />
                         </Typography>
                         <Typography color="textSecondary">Current Date<br />{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">deaths</Typography>
                     
-           </Grid></div>
+           </div></div>
     <div className={styles.circleone}></div>
     <div className={styles.circletwo}></div>
     <div className={styles.circlethree}></div>
   </div>
 </div>
     
-      </Grid>
+     
 
         </div>
     )

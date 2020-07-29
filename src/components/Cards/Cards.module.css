@@ -1,6 +1,9 @@
 .container{
     max-width: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    transition: 1s ease-out !important;
 }
 
 
@@ -44,21 +47,19 @@
     0 0 1px #eb1060;
 }
 .container {
-    padding: 60px 0px;
+ 
+    padding: 6px 0px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     align-items: center;
     justify-content: center;
   }
   .containerb {
-   padding-left:20% ;
-   padding-right: 20% ;
-   padding-top: 5% ;
-   padding-bottom: 35% ;
-    display: flex;
+    
     flex-direction: column; 
     align-items: center;
     justify-content: center;
+    margin: 1% 5% 30% 1%;
   }
   
   .circlewrapper {
@@ -136,4 +137,22 @@
 
 
   }
- 
+
+  @media only screen and (max-width: 1122px) {
+    .container {
+      transition: 1s ease-out !important;
+      flex-direction: column !important;
+      padding-bottom: 150px;
+      margin-top: -200px;
+
+    }
+    .containerb {
+    
+      flex-direction: column; 
+      align-items: center;
+      justify-content: center;
+      margin: 100px 300px !important;
+      padding: 50px 0;
+    }
+    
+  }

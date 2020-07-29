@@ -4,6 +4,7 @@ import styles from './App.module.css';
 import { fetchData } from './api';
 import Header from './components/Header/header';
 import { Grid } from '@material-ui/core';
+//  import 'leaflet/dist/leaflet.css';
 
 class App extends Component {
   state = {
@@ -34,6 +35,7 @@ class App extends Component {
         </Grid>
       <About />
         </Grid>
+        {/* <Map /> */}
      
         </div>
         </div>

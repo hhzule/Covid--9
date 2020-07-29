@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NativeSelect, FormControl } from '@material-ui/core';
+import { Select, MenuItem, FormControl } from '@material-ui/core';
 import styles from './Countryselect.module.css';
 import { fetchCountries } from '../../api';
 
@@ -22,10 +22,10 @@ useEffect(() => {
 
     return(
       <FormControl className={styles.formControl}>
-          <NativeSelect>
-             <option value="global">Global</option> 
-             {fetchedCountries.map((country, i) => <option key={i} value={country}>{country}</option>)}
-          </NativeSelect>
+          <Select >
+             <MenuItem value="global">Global</MenuItem> 
+             {fetchedCountries.map((country, i) => <MenuItem key={i} value={country}>{country}</MenuItem>)}
+          </Select>
       </FormControl>  
     )
 }
